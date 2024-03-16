@@ -108,58 +108,16 @@
         display: flex;
     }
 
-    .sidebar2 {
-        background-color: #fff;
-        padding: 20px;
-        min-width: 100px;
-    }
-
-    .sidebar2 h2 {
-        margin-bottom: 10px;
-    }
-
-    .content2 {
-        padding: 20px;
-    }
-
-  .category2 {
-    list-style: none;
-    padding: 0;
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.category3 {
-    flex: 0 0 100%; /* Use full width for one column */
-}
+  
 
 
-.category3 a {
-    display: block;
-    text-align: center;
-    margin: 2px;
-    border: 1px solid green;
-    border-radius: 50px;
-    text-decoration: none;
-    color: #333;
-    height: 40px;
-    width: 250PX;
-}
-
-.category3 a:hover {
-    background-color: #f4f4f4;
-}
 
 
-    a {
-        text-decoration: none;
-        color: #333;
-    }
 
-    a:hover {
-        text-decoration: underline;
-        color: #555;
-    }
+
+
+
+
 
 
     .form2 {
@@ -191,6 +149,9 @@
 #diseaseList li {
     padding: 5px;
 }
+#diseaseList ul{
+    padding-left: 30px;
+}
 
 @media screen and (max-width: 768px) {
     .container2 {
@@ -211,6 +172,48 @@
         column-count: 1;
         column-gap: 0;
     }
+}
+
+
+.details-wrapper{
+    margin-top: 50px;
+    margin-bottom: 200px;
+    padding-left: 300px;
+    padding-right: 300px;
+}
+.details-wrapper details {
+    display: block;
+    margin-bottom: 5px; 
+}
+
+details {
+  user-select: none;
+}
+
+details>summary span.icon {
+  width: 24px;
+  height: 24px;
+  transition: all 0.3s;
+  margin-left: auto;
+}
+
+details[open] summary span.icon {
+  transform: rotate(180deg);
+}
+
+summary {
+  display: flex;
+  cursor: pointer;
+}
+
+summary::-webkit-details-marker {
+  display: none;
+}
+details::after {
+    content: "";
+    display: block;
+    border-top: 1px solid #ccc;
+    margin: 5px 0;
 }
 
 
@@ -312,87 +315,131 @@
     </div>
  
     
-    <div class="container2" id="container2">
-    <div class="sidebar2" id="sidebar2">
-        <h6 style="font-size: 15px; font-weight: bold;">Find diseases and <br> conditions by category.</h6>
+   
+
+
+<div class="details-wrapper">
+    <h6 style="font-size: 15px; font-weight: bold;">Find diseases and conditions by category.</h6>
         <br><br>
-       
-        <ul class="category2" id="category2" style="width:250PX;">
-            <li class="category3" id="category3"><a href="#" >All</a></li>
-            <li class="category3" id="category3"><a href="#" data-category="musculoskeletal" onclick="filterDiseases('Musculoskeletal System')">Musculoskeletal System</a></li>
-            <li class="category3" id="category3"><a href="#" data-category="geriatrics" onclick="filterDiseases('Geriatrics')">Geriatrics</a></li>
-            <li class="category3" id="category3"><a href="#"  data-category="pediatrics" onclick="filterDiseases('Pediatrics')">Pediatrics</a></li>
-            <li class="category3" id="category3"><a href="#" data-category="endocrine" onclick="filterDiseases('Endocrine System')">Endocrine System</a></li>
-            <li class="category3" id="category3"><a href="#" data-category="womenhealth" onclick="filterDiseases('Women health')">Women health</a></li>
-            <li class="category3" id="category3"><a href="#" data-category="neurological" onclick="filterDiseases('Neurological System')">Neurological System</a></li>
-            <li class="category3" id="category3"><a href="#" data-category="respiratory" onclick="filterDiseases('Respiratory System')">Respiratory System</a></li>
-            <li class="category3" id="category3"><a href="#" data-category="sports" onclick="filterDiseases('Sports Injuries')">Sports Injuries</a></li>
-            <li class="category3" id="category3"><a href="#" data-category="cardiovascular" onclick="filterDiseases('Cardiovascular System')">Cardiovascular System</a></li>
-            <li class="category3" id="category3"><a href="#" data-category="healthpromotion" onclick="filterDiseases('Health Promotion')">Health Promotion</a></li>
+<details>
+  <summary>Musculoskeletal System <span class="icon">👇</span></summary>
+  <ul id="diseaseList">
+            <li class="content2" id="content2"  > <a href="categories/Musculoskeletal System/Low back pain/">  Low back pain </a></li>
+            <li class="content2" id="content2"  > <a href="categories/Musculoskeletal System/Arthitis">Arthritis (Osteoarthritis, Rheumatoid arthritis)</a> </li>
+            <li class="content2" id="content2"  > <a href="categories/Musculoskeletal System/Joint sprains and strains/">Joint sprains and strains</a> </li>
+            <li class="content2" id="content2"  > <a href="categories/Musculoskeletal System/Hip joint replacement/">Hip joint replacement</a> </li>
+            <li class="content2" id="content2"  > <a href="categories/Musculoskeletal System/Total knee replacement Knee/">Total knee replacement</a></li>
+            <li class="content2" id="content2"  > <a href="categories/Musculoskeletal System/">Knee joint deformities</a> </li>
+            <li class="content2" id="content2"  > <a href="categories/Musculoskeletal System/Knee pain/"> Knee pain</a></li>
+            <li class="content2" id="content2"  > <a href="categories/Musculoskeletal System/Neck Pain/"> Neck pain</a></li>
+            <li class="content2" id="content2"  > <a href="categories/Musculoskeletal System/Foot deformities/"> Foot deformities</a></li>
+            <li class="content2" id="content2"  > <a href="categories/Musculoskeletal System/Sciatica/"> Sciatica</a></li>
+            <li class="content2" id="content2"  > <a href="categories/Musculoskeletal System/Heel pain/">Heel pain</a> </li>
+            <li class="content2" id="content2"  > <a href="categories/Musculoskeletal System/Spondylolisthesis/">Spondylolisthesis</a> </li>
+            <li class="content2" id="content2"  > <a href="categories/Musculoskeletal System/Spinal stenosis/"> Spinal stenosis</a></li>
+            <li class="content2" id="content2"  > <a href="categories/Musculoskeletal System/Degenerative disc disease/">Degenerative disc disease</a> </li>
+            <li class="content2" id="content2"  > <a href="categories/Musculoskeletal System/Piriformis syndrome/"> Piriformis syndrome</a></li>
+            <li class="content2" id="content2"  > <a href="categories/Musculoskeletal System/Shoulder pain/"> Shoulder pain</a></li>
+            <li class="content2" id="content2"  > <a href="categories/Musculoskeletal System/Club foot/"> Club foot</a></li>
+            <li class="content2" id="content2"  > <a href="categories/Musculoskeletal System/Spinal deformities/">Spinal deformities</a> </li>
+           
         </ul>
-    </div>
-    <div class="container">
-         <div class="content2" id="content2" style="margin-bottom: 80px;">
-         <h6 style="font-size: 15px; font-weight: bold;">Read more about the disease <br> and conditions by clicking.</h6>
-        <br>
-        <ul id="diseaseList">
-            <li class="content2" id="content2" data-category="musculoskeletal"> <a href="categories/Musculoskeletal System/Low back pain/">  Low back pain </a></li>
-            <li class="content2" id="content2" data-category="musculoskeletal"> <a href="categories/Musculoskeletal System/Arthitis">Arthritis (Osteoarthritis, Rheumatoid arthritis)</a> </li>
-            <li class="content2" id="content2" data-category="musculoskeletal"> <a href="categories/Musculoskeletal System/Joint sprains and strains/">Joint sprains and strains</a> </li>
-            <li class="content2" id="content2" data-category="musculoskeletal"> <a href="categories/Musculoskeletal System/Hip joint replacement/"></a> Hip joint replacement</li>
-            <li class="content2" id="content2" data-category="musculoskeletal"> <a href="categories/Musculoskeletal System/Total knee replacement Knee/">Total knee replacement</a></li>
-            <li class="content2" id="content2" data-category="musculoskeletal"> <a href="categories/Musculoskeletal System/"></a> Knee joint deformities</li>
-            <li class="content2" id="content2" data-category="musculoskeletal"> <a href="categories/Musculoskeletal System/Knee pain/"> Knee pain</a></li>
-            <li class="content2" id="content2" data-category="musculoskeletal"> <a href="categories/Musculoskeletal System/Neck Pain/"> Neck pain</a></li>
-            <li class="content2" id="content2" data-category="musculoskeletal"> <a href="categories/Musculoskeletal System/Foot deformities/"> Foot deformities</a></li>
-            <li class="content2" id="content2" data-category="musculoskeletal"> <a href="categories/Musculoskeletal System/Sciatica/"> Sciatica</a></li>
-            <li class="content2" id="content2" data-category="musculoskeletal"> <a href="categories/Musculoskeletal System/Heel pain/">Heel pain</a> </li>
-            <li class="content2" id="content2" data-category="musculoskeletal"> <a href="categories/Musculoskeletal System/Spondylolisthesis/">Spondylolisthesis</a> </li>
-            <li class="content2" id="content2" data-category="musculoskeletal"> <a href="categories/Musculoskeletal System/Spinal stenosis/"> Spinal stenosis</a></li>
-            <li class="content2" id="content2" data-category="musculoskeletal"> <a href="categories/Musculoskeletal System/Degenerative disc disease/">Degenerative disc disease</a> </li>
-            <li class="content2" id="content2" data-category="musculoskeletal"> <a href="categories/Musculoskeletal System/Piriformis syndrome/"> Piriformis syndrome</a></li>
-            <li class="content2" id="content2" data-category="musculoskeletal"> <a href="categories/Musculoskeletal System/Shoulder pain/"> Shoulder pain</a></li>
-            <li class="content2" id="content2" data-category="musculoskeletal"> <a href="categories/Musculoskeletal System/Club foot/"> Club foot</a></li>
-            <li class="content2" id="content2" data-category="musculoskeletal"> <a href="categories/Musculoskeletal System/Spinal deformities/">Spinal deformities</a> </li>
-            <li class="content2" id="content2" data-category="geriatrics"><a href="categories/Geriatrics/Osteoporosis/">Balance disorders in elderly</a></li>
-            <li class="content2" id="content2" data-category="geriatrics"><a href="categories/Geriatrics/Osteoporosis/"> Osteoporosis </a></li>
-            <li class="content2" id="content2" data-category="geriatrics"> <a href="categories/Geriatrics/Parkinson's disease/">Parkinson's disease</a> </li>
-            <li class="content2" id="content2" data-category="pediatrics" > <a href="categories/Pediatrics/Developmental delays/"> Developmental delays</a></li>
-            <li class="content2" id="content2" data-category="pediatrics" > <a href="categories/Pediatrics/Cerebral palsy/"> Cerebral palsy</a></li>
-            <li class="content2" id="content2" data-category="pediatrics" > <a href="categories/Pediatrics/Down syndrome/"> Down syndrome</a></li>
-            <li class="content2" id="content2" data-category="pediatrics" > <a href="categories/Pediatrics/Autism/"> Autism</a></li>
-            <li class="content2" id="content2" data-category="endocrine"> <a href="categories/Endocrine System/Diabetes/">Diabetes (Peripheral neuropathy, Diabetic foot)</a> </li>
-            <li class="content2" id="content2" data-category="endocrine"> <a href="categories/Endocrine System/Obesity"> Obesity</a></li>
-            <li class="content2" id="content2" data-category="womenhealth"> <a href="categories/Women health/Pregnancy-related musculoskeletal pain/"> Pregnancy-related musculoskeletal pain </a></li>
-            <li class="content2" id="content2" data-category="womenhealth"> <a href="categories/Women health/Cesarean section/"> Cesarean section</a></li>
-            <li class="content2" id="content2" data-category="neurological"> <a href="categories/Neurological System/Stroke/"> Stroke (Cerebrovascular accident)</a> </li>
-            <li class="content2" id="content2" data-category="neurological"> <a href="categories/Neurological System/Spinal cord injury/">Spinal cord injury</a> </li>
-            <li class="content2" id="content2" data-category="neurological"> <a href="categories/Neurological System/Head injury/">Head injury</a> </li>
-            <li class="content2" id="content2" data-category="neurological"> <a href="categories/Neurological System/Cerebral palsy/">Cerebral palsy</a> </li>
-            <li class="content2" id="content2" data-category="neurological"> <a href="categories/Neurological System/Guillain Barre Syndrome/">Guillain-Barré syndrome</a> </li>
-            <li class="content2" id="content2" data-category="neurological"> <a href="categories/Neurological System/Facial Nerve Palsy/">Facial Nerve Palsy</a> </li> 
-            <li class="content2" id="content2" data-category="neurological"> <a href="categories/Neurological System/Erb's palsy/">Erb’s palsy</a> </li>
-            <li class="content2" id="content2" data-category="respiratory"> <a href="categories/Respiratory System/Chronic obstructive pulmonary diseases (COPD)/">  Chronic obstructive pulmonary diseases (COPD)</a></li>
-            <li class="content2" id="content2" data-category="respiratory"> <a href="categories/Respiratory System/Asthma/"> Asthma</a></li>
-            <li class="content2" id="content2" data-category="respiratory"> <a href="categories/Respiratory System/Pneumonia/"> Pneumonia</a></li>
-            <li class="content2" id="content2" data-category="sports"> <a href="categories/Sports Injuries/ACL injuries/"> ACL injuries</a></li>
-            <li class="content2" id="content2" data-category="sports"> <a href="categories/Sports Injuries/Muscle tears/"> Muscle tears</a> </li>
-            <li class="content2" id="content2" data-category="sports"> <a href="categories/Sports Injuries/Overuse injuries/"> Overuse injuries</a></li>
-            <li class="content2" id="content2" data-category="cardiovascular"> <a href="categories/Cardiovascular System/Venous insufficiency/">Venous insufficiency</a> </li>
-            <li class="content2" id="content2" data-category="cardiovascular"> <a href="categories/Cardiovascular System/Heart attack (Myocardial Infarction)/"> Heart attack (Myocardial Infarction)</a></li>
-            <li class="content2" id="content2" data-category="cardiovascular"> <a href="categories/Cardiovascular System/Heart failure/">Heart failure</a>  </li>
-            <li class="content2" id="content2" data-category="cardiovascular"> <a href="categories/Cardiovascular System/Hypertension/"> Hypertension</a></li>
-            <li class="content2" id="content2" data-category="healthpromotion"> <a href="categories/Health Promotion/Workplace ergonomics for computer users/"> Workplace ergonomics for computer users</a></li>
-            <li class="content2" id="content2" data-category="healthpromotion"> <a href="categories/Health Promotion/Physiotherapy for Aging Populations/">Physiotherapy for Aging Populations</a> </li>
-            <li class="content2" id="content2" data-category="healthpromotion"> <a href="categories/Health Promotion/Best strategies for promoting functional independence and preventing physical deconditioning in elderly individuals who are bedridden or have limited mobility/"> Best strategies for promoting functional independence and preventing physical deconditioning in elderly individuals who are bedridden or have limited mobility</a></li>
-            <li class="content2" id="content2" data-category="healthpromotion"> <a href="categories/Health Promotion/The Role of Physical Activity in Managing Anxiety and Depression/"> The Role of Physical Activity in Managing Anxiety and Depression</a></li>
-            <li class="content2" id="content2" data-category="healthpromotion"> <a href="categories/Health Promotion/Physiotherapy as a Pillar of Holistic Health/"> Physiotherapy as a Pillar of Holistic Health</a></li>
-            <li class="content2" id="content2" data-category="healthpromotion"> <a href="categories/Health Promotion/The Role of Physiotherapy in Preventing Lifestyle Diseases/"> The Role of Physiotherapy in Preventing Lifestyle Diseases</a></li>
+</details><br>
+
+<details><summary>  Geriatrics  <span class="icon">👇</span> </summary>
+  <ul id="diseaseList">
+            
+            <li class="content2" id="content2"   ><a href="categories/Geriatrics/Osteoporosis/">Balance disorders in elderly</a></li>
+            <li class="content2" id="content2"   ><a href="categories/Geriatrics/Osteoporosis/"> Osteoporosis </a></li>
+            <li class="content2" id="content2"   > <a href="categories/Geriatrics/Parkinson's disease/">Parkinson's disease</a> </li>
 
 
         </ul>
-        </div>
-    </div>
+</details><br>
+<details><summary>  Pediatrics  <span class="icon">👇</span></summary>
+  <ul id="diseaseList">
+            <li class="content2" id="content2"     > <a href="categories/Pediatrics/Developmental delays/"> Developmental delays</a></li>
+            <li class="content2" id="content2"     > <a href="categories/Pediatrics/Cerebral palsy/"> Cerebral palsy</a></li>
+            <li class="content2" id="content2"     > <a href="categories/Pediatrics/Down syndrome/"> Down syndrome</a></li>
+            <li class="content2" id="content2"     > <a href="categories/Pediatrics/Autism/"> Autism</a></li>
+        </ul>
+</details><br>
+<details><summary>  Endocrine System  <span class="icon">👇</span></summary>
+ <ul id="diseaseList">
+            
+            <li class="content2" id="content2"   > <a href="categories/Endocrine System/Diabetes/">Diabetes (Peripheral neuropathy, Diabetic foot)</a> </li>
+            <li class="content2" id="content2"   > <a href="categories/Endocrine System/Obesity"> Obesity</a></li>
+        </ul>
+</details><br>
+<details><summary>  Women health  <span class="icon">👇</span></summary>
+  <ul id="diseaseList">
+           <li class="content2" id="content2"   > <a href="categories/Women health/Pregnancy-related musculoskeletal pain/"> Pregnancy-related musculoskeletal pain </a></li>
+            <li class="content2" id="content2"   > <a href="categories/Women health/Cesarean section/"> Cesarean section</a></li>
+
+
+        </ul>
+</details><br>
+<details><summary>  Neurological System  <span class="icon">👇</span></summary>
+ <ul id="diseaseList">
+            <li class="content2" id="content2"   > <a href="categories/Neurological System/Stroke/"> Stroke (Cerebrovascular accident)</a> </li>
+            <li class="content2" id="content2"   > <a href="categories/Neurological System/Spinal cord injury/">Spinal cord injury</a> </li>
+            <li class="content2" id="content2"   > <a href="categories/Neurological System/Head injury/">Head injury</a> </li>
+            <li class="content2" id="content2"   > <a href="categories/Neurological System/Cerebral palsy/">Cerebral palsy</a> </li>
+            <li class="content2" id="content2"   > <a href="categories/Neurological System/Guillain Barre Syndrome/">Guillain-Barré syndrome</a> </li>
+            <li class="content2" id="content2"   > <a href="categories/Neurological System/Facial Nerve Palsy/">Facial Nerve Palsy</a> </li> 
+            <li class="content2" id="content2"   > <a href="categories/Neurological System/Erb's palsy/">Erb’s palsy</a> </li>
+            
+
+
+        </ul>
+</details><br>
+<details><summary>  Respiratory System  <span class="icon">👇</span></summary>
+  <ul id="diseaseList">
+            <li class="content2" id="content2"   > <a href="categories/Respiratory System/Chronic obstructive pulmonary diseases (COPD)/">  Chronic obstructive pulmonary diseases (COPD)</a></li>
+            <li class="content2" id="content2"   > <a href="categories/Respiratory System/Asthma/"> Asthma</a></li>
+            <li class="content2" id="content2"   > <a href="categories/Respiratory System/Pneumonia/"> Pneumonia</a></li>
+            
+
+
+        </ul>
+</details><br>
+<details><summary>  Sports Injuries  <span class="icon">👇</span></summary>
+  <ul id="diseaseList">
+          
+            <li class="content2" id="content2"   > <a href="categories/Sports Injuries/ACL injuries/"> ACL injuries</a></li>
+            <li class="content2" id="content2"   > <a href="categories/Sports Injuries/Muscle tears/"> Muscle tears</a> </li>
+            <li class="content2" id="content2"   > <a href="categories/Sports Injuries/Overuse injuries/"> Overuse injuries</a></li>
+           
+
+
+        </ul>
+</details><br>
+<details><summary>  Cardiovascular System  <span class="icon">👇</span></summary>
+ <ul id="diseaseList">
+           
+            <li class="content2" id="content2"   > <a href="categories/Cardiovascular System/Venous insufficiency/">Venous insufficiency</a> </li>
+            <li class="content2" id="content2"   > <a href="categories/Cardiovascular System/Heart attack (Myocardial Infarction)/"> Heart attack (Myocardial Infarction)</a></li>
+            <li class="content2" id="content2"   > <a href="categories/Cardiovascular System/Heart failure/">Heart failure</a>  </li>
+            <li class="content2" id="content2"   > <a href="categories/Cardiovascular System/Hypertension/"> Hypertension</a></li>
+           
+
+        </ul>
+</details><br>
+<details><summary>  Health Promotion  <span class="icon">👇</span></summary>
+  <ul id="diseaseList">
+           
+            <li class="content2" id="content2"   > <a href="categories/Health Promotion/Workplace ergonomics for computer users/"> Workplace ergonomics for computer users</a></li>
+            <li class="content2" id="content2"   > <a href="categories/Health Promotion/Physiotherapy for Aging Populations/">Physiotherapy for Aging Populations</a> </li>
+            <li class="content2" id="content2"   > <a href="categories/Health Promotion/Best strategies for promoting functional independence and preventing physical deconditioning in elderly individuals who are bedridden or have limited mobility/"> Best strategies for promoting functional independence and preventing physical deconditioning in elderly individuals who are bedridden or have limited mobility</a></li>
+            <li class="content2" id="content2"   > <a href="categories/Health Promotion/The Role of Physical Activity in Managing Anxiety and Depression/"> The Role of Physical Activity in Managing Anxiety and Depression</a></li>
+            <li class="content2" id="content2"   > <a href="categories/Health Promotion/Physiotherapy as a Pillar of Holistic Health/"> Physiotherapy as a Pillar of Holistic Health</a></li>
+            <li class="content2" id="content2"   > <a href="categories/Health Promotion/The Role of Physiotherapy in Preventing Lifestyle Diseases/"> The Role of Physiotherapy in Preventing Lifestyle Diseases</a></li>
+
+
+        </ul>
+</details><br>
+</div>
+
 </div>
 
 
@@ -505,38 +552,7 @@
     f.addEventListener('submit', submitted);
     </script>
 
-    <!-- JS For Category Side Bar -->
-    <script>
-    // Function to filter diseases based on selected category
-function filterDiseases(category) {
-    const diseases = document.querySelectorAll('#diseaseList li');
-    diseases.forEach(disease => {
-        if (category === 'all' || disease.getAttribute('data-category') === category) {
-            disease.style.display = 'block';
-        } else {
-            disease.style.display = 'none';
-        }
-    });
-}
-
-// Add event listeners to category links to trigger filtering
-const categoryLinks = document.querySelectorAll('#category2 a');
-categoryLinks.forEach(link => {
-    link.addEventListener('click', function(event) {
-        event.preventDefault();
-        const category = this.getAttribute('data-category');
-        filterDiseases(category);
-    });
-});
-
-// Add event listener to the "All" button to show all diseases
-document.querySelector('#category2 li:first-child a').addEventListener('click', function(event) {
-    event.preventDefault();
-    filterDiseases('all');
-});
-
-
-    </script>
+   
     <!-- Js Plugins -->
     <script src="js/jquery-3.3.1.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
